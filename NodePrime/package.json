@@ -1,0 +1,10 @@
+{
+  "name": "NodePrimeQuiz",
+  "version": "0.0.0",
+  "description": "",
+  "main": "simpleserver.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.67.0"
+  }
+}
