@@ -1,11 +1,24 @@
 # quiz
 
+## Overview
+This implementation is in Javascript using a basic Node/Express server.
+The user should input the url of where the input is stored as a query string. The server makes a GET request to obtain the file contents and builds up a trie of the words. 
 
-Q: Given a list of words like https://github.com/NodePrime/quiz/blob/master/word.list find the longest compound-word in the list, which is also a concatenation of other sub-words that exist in the list. The program should allow the user to input different data. The finished solution shouldn't take more than one hour. Any programming language can be used, but Go is preferred.
+## Run
+Open the directory in the terminal, and from the NodePrime root folder, run
+```
+npm install
+```
+to get install dependencies and then
+```
+node simpleserver.js
+```
 
+The server will then be listening on port 3000, so go to your local host at that port.
+You can then add in whichever input you like in the query string so long as it is valid
+for example:
+http://localhost:3000/?https://raw.githubusercontent.com/NodePrime/quiz/master/word.list
 
-Fork this repo, add your solution and documentation on how to compile and run your solution, and then issue a Pull Request. 
+The response will be the longest compound word in the query string, so for example in the provided input the output is 'electroencephalographically'.
 
-Obviously, we are looking for a fresh solution, not based on others' code.
-
-
+The steps are commented within the simplerserver.js file!
